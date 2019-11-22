@@ -2,15 +2,13 @@
 
 <html>
     <head>
-        <title>Videogames</title>
+        <title>Home</title>
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="videogames.css">
+        <link rel="stylesheet" href="science.css">
     </head>
 
     <body>
-        <header>
-            <h1>coolshit.com</h1>
-        </header>
+        <h1>coolshit.com</h1>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -20,7 +18,5 @@
                 <li><a href="cars.html">Cars</a></li>
             </ul>
         </nav>
-        <footer>
-        </footer>
     </body>
 </html>
