@@ -3,6 +3,11 @@ body {
     color: #87ebda;
 }
 
+header {
+    width: 80%;
+    margin: auto auto;
+}
+
 header h1 {
     font-size: 60px;
 }
@@ -13,38 +18,83 @@ header p {
 
 .home-main-nav {
     padding: 5% 5%;
+    margin: 100px 0 100px 0;
+    background-color: #003029;
+    transform: skew(1deg, 1deg);
 }
 
 .home-main-nav li {
+    background-color: #001f1a;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 15px 0;
+    margin: 50px 0;
+    padding: 15px 15px;
+    position: relative;
 }
 
 .home-main-nav li:nth-child(odd) {
+    transform: skew(-2deg, -2deg);
     flex-direction: row;
+    right: 15px;
 }
 
 .home-main-nav li:nth-child(even) {
     flex-direction: row-reverse;
+    left: 15px;
+}
+
+/* TRANSITION STUFF */
+
+/*I add 'scale(1, 1)' to both <a>'s in order for transition to work properly*/
+.home-main-nav li:nth-child(odd) a, .home-main-nav li:nth-child(odd) p {
+    transform: skew(1deg, 1deg) scale(1, 1);
+}
+
+.home-main-nav li:nth-child(even) a, .home-main-nav li:nth-child(even) p {
+    transform: skew(-1deg, -1deg) scale(1, 1);
 }
 
 .home-main-nav li a {
-    flex: 0 0 30%;
+    -webkit-perspective: 1000;
+    transition: transform 0.2s;
+}
+
+/* HOVER */
+.home-main-nav li:nth-child(odd) a:hover {
+    transform: skew(1deg, 1deg) scale(1.03, 1.03);
+}
+
+.home-main-nav li:nth-child(even) a:hover {
+    transform: skew(-1deg, -1deg) scale(1.03, 1.03);
+}
+
+/* ETC. */
+
+.home-main-nav li a {
+    flex: 0 0 35%;
     margin: 0 0;
     align-items: center;
+    position: relative;
+    bottom: 3px;
 }
 
 .home-main-nav li p {
-    flex: 0 0 65%;
+    flex: 0 0 60%;
     margin: 0 0;
+    align-items: center;
+    position: relative;
+    top: 3px;
 }
 
 .home-main-nav li a img {
     display: block;
     width: 100%;
+}
+
+footer {
+    height: 100px;
 }
 
 
@@ -65,6 +115,7 @@ header p {
 
 
 /* DEBUG */
+
 .home-main-nav li {
     border: 1px solid green;
 }
