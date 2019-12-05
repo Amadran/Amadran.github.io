@@ -1,21 +1,25 @@
+/* BODY */
 body {
-    background-image: linear-gradient(to bottom, #002b24, #19b099);
+    background-image: url("wallpaper1.jpg");
     color: #87ebda;
 }
 
+/* HEADER */
 header {
     width: 80%;
-    margin: auto auto;
+    margin: 50px auto;
 }
 
 header h1 {
     font-size: 60px;
+    margin: 25px auto;
 }
 
 header p {
     font-size: 25px;
 }
 
+/* MAIN PAGE NAVIGATION */
 .home-main-nav {
     padding: 5% 5%;
     margin: 100px 0 100px 0;
@@ -30,7 +34,7 @@ header p {
     align-items: center;
     justify-content: space-between;
     margin: 50px 0;
-    padding: 15px 15px;
+    padding: 25px 25px;
     position: relative;
 }
 
@@ -57,7 +61,6 @@ header p {
 }
 
 .home-main-nav li a {
-    -webkit-perspective: 1000;
     transition: transform 0.2s;
 }
 
@@ -71,7 +74,6 @@ header p {
 }
 
 /* ETC. */
-
 .home-main-nav li a {
     flex: 0 0 35%;
     margin: 0 0;
@@ -91,10 +93,65 @@ header p {
 .home-main-nav li a img {
     display: block;
     width: 100%;
+    position: relative;
+    z-index: 11;
 }
 
+/* IMG BORDER */
+.img-border {
+    width: 106%;
+    height: 106%;
+    position: absolute;
+    left: -3%;
+    top: -3%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    background-color: #2bf3d2;
+    z-index: 10;
+}
+
+.home-main-nav li:nth-child(odd) .img-border {
+    transform: skew(1deg, 1deg);
+}
+
+.home-main-nav li:nth-child(even) .img-border {
+    transform: skew(-1deg, -1deg);
+}
+
+
+/* EXTRA HOVER EFFECT FOR IMG BORDER */
+.home-main-nav li a:hover .img-border {
+    opacity: 1;
+}
+
+/* FOOTER */
 footer {
-    height: 100px;
+    background-color: #001f1a;
+    box-sizing: border-box;
+    padding: 40px 25px 40px 25px;
+    width: 100%;
+}
+
+footer h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+    width: 100%;
+}
+
+footer nav, footer ul {
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #87ebda;
 }
 
 
@@ -117,13 +174,26 @@ footer {
 /* DEBUG */
 
 .home-main-nav li {
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .home-main-nav li a, .home-main-nav li p {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .home-main-nav li a img {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
+
+
+
+/*
+.home-main-nav li a {
+    transform: scale(1, 1);
+    transition: transform 300ms;
+}
+
+.home-main-nav li a:hover {
+    transform: scale(1.03, 1.03);
+}
+*/

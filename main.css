@@ -1,7 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Gudea&display=swap');
 
+/* figured I'd rather add margin and padding myself after all */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /* width: 100%; */
+    /* min-height: 100%; */
+}
+
 body {
     font-family: 'Gudea', sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+/* had to remove 'width: 90%' from body in order to allow individual elements */
+/* like footer to have different total widths if needed */
+body * {
     width: 90%;
     margin: 0 auto;
 }
