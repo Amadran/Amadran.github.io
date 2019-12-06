@@ -1,12 +1,13 @@
 /* BODY */
 body {
-    background-image: url("wallpaper1.jpg");
-    color: #87ebda;
+    background-image: url("wallpaper5.jpg");
+    background-position: -1650px -1050px;
+    color: #a0ecff;
 }
 
 /* HEADER */
 header {
-    background-image: linear-gradient(to bottom, rgba(0,48,41,1), rgba(0,48,41,0));
+    /* background-image: linear-gradient(to bottom, rgba(168, 16, 182, 0.6), rgba(168, 16, 182, 0)); */
     width: 100%;
     margin: 0 auto;
 }
@@ -29,13 +30,13 @@ main, nav {
 
 .home-main-nav {
     padding: 5% 5%;
-    margin: 100px 0 100px 0;
-    background-color: #003029;
+    margin: 300px 0 300px 0;
+    background-color: #01002e;
     transform: skew(1deg, 1deg);
 }
 
 .home-main-nav li {
-    background-color: #001f1a;
+    background-color: #300c58;
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -144,7 +145,7 @@ main, nav {
 
 /* FOOTER */
 footer {
-    background-color: #001f1a;
+    background-color: #01002e;
     box-sizing: border-box;
     padding: 40px 25px 40px 25px;
     width: 100%;
@@ -173,8 +174,8 @@ footer ul li {
 }
 
 footer ul li a {
+    color: #a0ecff;
     text-decoration: none;
-    color: #87ebda;
     display: block;
     text-align: center;
     padding: 10px 0;
@@ -194,7 +195,7 @@ footer ul li:nth-child(odd) .footer-a-background {
 }
 
 .footer-a-background {
-    background-color: #001310;
+    background-color: #300c58;
     position: absolute;
     width: 100%;
     height: 100%;

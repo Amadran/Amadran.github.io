@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gudea&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
 
 /* figured I'd rather add margin and padding myself after all */
 * {
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Gudea', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 20px;
 }
 
