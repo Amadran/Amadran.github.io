@@ -1,6 +1,6 @@
 /* BODY */
 body {
-    background-image: url("wallpaper5.jpg");
+    background-image: url("../img/wallpaper5.jpg");
     background-position: -1650px -1050px;
     color: #a0ecff;
 }
@@ -59,26 +59,45 @@ main, nav {
 
 /* TRANSITION STUFF */
 
-/*I add 'scale(1, 1)' to both <a>'s in order for transition to work properly*/
 .home-main-nav li:nth-child(odd) a, .home-main-nav li:nth-child(odd) p {
-    transform: skew(1deg, 1deg) scale(1, 1);
+    transform: skew(1deg, 1deg);
 }
 
 .home-main-nav li:nth-child(even) a, .home-main-nav li:nth-child(even) p {
-    transform: skew(-1deg, -1deg) scale(1, 1);
+    transform: skew(-1deg, -1deg);
 }
 
 .home-main-nav li a {
-    transition: transform 0.2s;
+    animation-duration: 0.3s;
 }
 
 /* HOVER */
 .home-main-nav li:nth-child(odd) a:hover {
-    transform: skew(1deg, 1deg) scale(1.03, 1.03);
+    animation-name: link-hover-odd;
 }
 
 .home-main-nav li:nth-child(even) a:hover {
-    transform: skew(-1deg, -1deg) scale(1.03, 1.03);
+    animation-name: link-hover-even;
+}
+
+@keyframes link-hover-odd {
+    from {
+        transform: skew(1deg, 1deg) scale(1, 1);
+    }
+
+    to {
+        transform: skew(1deg, 1deg) scale(1.03, 1.03);
+    }
+}
+
+@keyframes link-hover-even {
+    from {
+        transform: skew(-1deg, -1deg) scale(1, 1);
+    }
+
+    to {
+        transform: skew(-1deg, -1deg) scale(1.03, 1.03);
+    }
 }
 
 /* ETC. */
@@ -88,6 +107,7 @@ main, nav {
     align-items: center;
     position: relative;
     bottom: 3px;
+    backface-visibility: hidden;
 }
 
 .home-main-nav li p {
@@ -96,6 +116,7 @@ main, nav {
     align-items: center;
     position: relative;
     top: 3px;
+    backface-visibility: hidden;
 }
 
 .home-main-nav li a img {
@@ -103,6 +124,7 @@ main, nav {
     width: 100%;
     position: relative;
     z-index: 11;
+    backface-visibility: hidden;
 }
 
 /* IMG BORDER */

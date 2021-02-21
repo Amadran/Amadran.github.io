@@ -1,0 +1,287 @@
+/* BODY */
+body {
+    background-image: url("../img/wallpaper5.jpg");
+    background-position: -1650px -1050px;
+    color: #a0ecff;
+}
+
+/* HEADER */
+header {
+    /* background-image: linear-gradient(to bottom, rgba(168, 16, 182, 0.6), rgba(168, 16, 182, 0)); */
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 60px;
+    margin: 0;
+    padding: 5%;
+}
+
+header p {
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+/* MAIN PAGE NAVIGATION */
+main, nav {
+    margin: 0 auto;
+}
+
+.home-main-nav {
+    padding: 5% 5%;
+    margin: 300px 0 300px 0;
+    background-color: #01002e;
+    transform: skew(1deg, 1deg);
+}
+
+.home-main-nav li {
+    background-color: #300c58;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    padding: 25px 25px;
+    position: relative;
+}
+
+.home-main-nav li:nth-child(odd) {
+    transform: skew(-2deg, -2deg);
+    flex-direction: row;
+    right: 15px;
+}
+
+.home-main-nav li:nth-child(even) {
+    flex-direction: row-reverse;
+    left: 15px;
+}
+
+/* TRANSITION STUFF */
+
+/*I add 'scale(1, 1)' to both <a>'s in order for transition to work properly*/
+.home-main-nav li:nth-child(odd) a, .home-main-nav li:nth-child(odd) p {
+    transform: skew(1deg, 1deg) scale(1, 1);
+}
+
+.home-main-nav li:nth-child(even) a, .home-main-nav li:nth-child(even) p {
+    transform: skew(-1deg, -1deg) scale(1, 1);
+}
+
+.home-main-nav li a {
+    transition: transform 0.2s;
+}
+
+/* HOVER */
+.home-main-nav li:nth-child(odd) a:hover {
+    transform: skew(1deg, 1deg) scale(1.03, 1.03);
+}
+
+.home-main-nav li:nth-child(even) a:hover {
+    transform: skew(-1deg, -1deg) scale(1.03, 1.03);
+}
+
+/* ETC. */
+.home-main-nav li a {
+    flex: 0 0 35%;
+    margin: 0 0;
+    align-items: center;
+    position: relative;
+    bottom: 3px;
+    /* transform: translateZ(0); */
+    backface-visibility: hidden;
+    /* -webkit-font-smoothing: none; */
+    font-smooth: never;
+}
+
+.home-main-nav li p {
+    flex: 0 0 60%;
+    margin: 0 0;
+    align-items: center;
+    position: relative;
+    top: 3px;
+    /* transform: translateZ(0); */
+    backface-visibility: hidden;
+    /* -webkit-font-smoothing: none; */
+    font-smooth: never;
+}
+
+.home-main-nav li a img {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 11;
+    /* transform: translateZ(0);*/
+    backface-visibility: hidden;
+    /* -webkit-font-smoothing: none; */
+    font-smooth: never;
+}
+
+/* IMG BORDER */
+.img-border {
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.home-main-nav li:nth-child(1) .img-border {
+    transform: skew(1deg, 1deg);
+    background-color: #2bf3d2;
+}
+
+.home-main-nav li:nth-child(2) .img-border {
+    transform: skew(-1deg, -1deg);
+    background-color: #d735ff;
+}
+
+.home-main-nav li:nth-child(3) .img-border {
+    transform: skew(1deg, 1deg);
+    background-color: #41ff41;
+}
+
+.home-main-nav li:nth-child(4) .img-border {
+    transform: skew(-1deg, -1deg);
+    background-color: #f32b2b;
+}
+
+.home-main-nav li:nth-child(5) .img-border {
+    transform: skew(-1deg, -1deg);
+    background-color: #ff90da;
+}
+
+
+/* EXTRA HOVER EFFECT FOR IMG BORDER */
+.home-main-nav li a:hover .img-border {
+    opacity: 1;
+}
+
+/* FOOTER */
+footer {
+    background-color: #01002e;
+    box-sizing: border-box;
+    padding: 40px 25px 40px 25px;
+    width: 100%;
+}
+
+footer h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+    width: 100%;
+}
+
+footer nav, footer ul {
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li {
+    padding: 0 15px;
+    flex: 0 0 8%;
+    position: relative;
+}
+
+footer ul li a {
+    color: #a0ecff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+/* FOOTER HOVER THING */
+footer ul li:nth-child(even) .footer-a-background {
+    transform: skew(-1deg, -1deg) scale(1, 1);
+}
+
+footer ul li:nth-child(odd) .footer-a-background {
+    transform: skew(1deg, 1deg) scale(1, 1);
+}
+
+.footer-a-background {
+    background-color: #300c58;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 9;
+}
+
+/* FOOTER HOVER */
+footer ul a:hover + .footer-a-background {
+    opacity: 1;
+}
+
+footer ul li:nth-child(even) a:hover .footer-a-background {
+    /* opacity: 1; */
+    /* transform: skew(-1deg, -1deg) scale(1.03, 1.03); */
+}
+
+footer ul li:nth-child(odd) a:hover .footer-a-background {
+    /* opacity: 1; */
+    /* transform: skew(1deg, 1deg) scale(1.03, 1.03); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DEBUG */
+
+.home-main-nav li {
+    /* border: 1px solid green; */
+}
+
+.home-main-nav li a, .home-main-nav li p {
+    /* border: 1px solid red; */
+}
+
+.home-main-nav li a img {
+    /* border: 1px solid orange; */
+}
+
+
+
+/*
+.home-main-nav li a {
+    transform: scale(1, 1);
+    transition: transform 300ms;
+}
+
+.home-main-nav li a:hover {
+    transform: scale(1.03, 1.03);
+}
+*/
